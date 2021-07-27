@@ -65,11 +65,14 @@
     margin-top: 105px;
     position: relative;
     display: table;
+    margin-left: auto;
+    margin-right: auto;
     &__title{
         @include table-cell;
         position: absolute;
         width: 480px;
         padding-top: 150px;
+        margin-left: -150px;
         h1{
             font-family: Helvetica;
             font-style: normal;
@@ -94,9 +97,9 @@
     }
     &__img{
         @include table-cell;
-        width: 90%;
+        width: 100%;
         float: right;
-        margin-right: -57px;
+        margin-right: -200px;
     }
 }
 
@@ -110,7 +113,7 @@
         }
     }
     p{
-        text-align: center;
+        text-align: center !important;
         font-family: Helvetica;
         font-size: 24px;
         line-height: 29px;
@@ -171,7 +174,12 @@
 }
 
 @include responsive_1024{
-
+    .banner{
+        overflow-x: hidden;
+        &__title{
+            margin-left: 0;
+        }
+    }
 }
 @include responsive_768{
     .container{
@@ -179,6 +187,8 @@
         margin: 10px 30px;
     }
     .banner{
+        margin-left: 20px;
+        margin-right: 20px;
         &__title{
             width: 350px;
             padding-top: 90px;
@@ -221,6 +231,7 @@
         &__title{
             width: 350px;
             padding-top: 30px;
+            margin-left: 20px;
             h1{
                 font-size: 24px;
             }
@@ -230,40 +241,49 @@
         }
         &__img{
             width: 100%;
-            margin-right: 0;           
+            margin-right: 0;  
+            opacity: 0.4; 
+            margin-top: 50px;  
         }
     }
     .slide{
+        margin-left: 15px;
+        margin-right: 15px;
         img{
             width: 100%;
         }
         p{
             margin-bottom: 30px;
+            text-align: center;
         }
     }
     .contact{
         margin-top: 10px;
+        &__title{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
         form{
+            width: 100%;
             flex-flow: column;
         }
         button{
             margin-top: 10px;
         }
     }
-    .footer li{
-        padding: 0px 10px;
+    .footer{
+        display: none;
     }
 }
 @include responsive_360{
-    .container{
-        margin-left: 15px;
-        margin-right: 15px;
-    }
     .header{
         max-width: 360px;
         margin: 10px 30px;
         flex-flow: column;
-        align-items: flex-start !important;        
+        align-items: flex-start !important; 
+        &__logo-name{
+            font-size: 24px;
+        }       
     }
     .header__menu li{
         padding: 0;
@@ -275,6 +295,8 @@
     }
     .banner{
         display: inherit;
+        margin-left: 15px;
+        margin-right: 15px;
         &__title{
             position: static;
             padding-top: 50px !important;
@@ -288,11 +310,14 @@
         }
     }
     .slide{
+        margin-left: 15px;
+        margin-right: 15px;
         img{
             width: 100%;
         }
         p{
             margin-bottom: 30px;
+            text-align: center;
         }
     }
     .contact{
@@ -306,8 +331,17 @@
             margin-top: 10px;
         }
     }
-    .footer li{
-        display: grid;
-        margin: 10px auto;
+    .footer{
+        height: 200px;
+        ul{
+            padding: 20px 0;
+        }
+        li{
+            display: grid;
+            margin: 10px auto;
+        }
+        a{
+            font-size: 14px;
+        }
     }
 }

@@ -1,0 +1,89 @@
+
+.infomation{
+    margin-top: 150px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    h5{
+        font-family: Helvetica;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 138.5%;
+        color: #383838;
+    }
+    li{
+        margin: 25px 0;
+    }
+    a{
+        font-family: Helvetica;
+        font-size: 16px;
+        line-height: 138.5%;
+        color: #383838;
+        &:hover{
+            color: #429E05;
+        }
+    }
+    p{
+        font-family: Helvetica;
+        font-size: 16px;
+        line-height: 138.5%;
+        color: #383838;
+        margin-top: 16px;
+        text-align: justify;
+    }
+    &__farmer{
+        img{
+            margin-top: 25px;
+            margin-bottom: 35px;
+        }
+    }
+    &__make{
+        img{
+            margin-top: 25px;
+            margin-bottom: 35px;
+        }
+    }
+    &__img{
+        h5{
+            margin-bottom: 35px;
+        }
+        p{
+            margin-top: 16px;
+            font-family: Helvetica;
+            line-height: 24px;
+            color: #383838;
+        }
+        .title__price,
+        .title__info{
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .title__img{
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+}
+hr{
+    margin: 25px auto;
+}
+
+@include responsive_1024{
+    
+}
+
+@include responsive_768{
+    
+}
+
+@include responsive_361{
+    
+}
+
+@include responsive_360{
+    .infomation__img,
+    .infomation__make,
+    .infomation__farmer{
+        margin: 0 20px;
+    }
+}

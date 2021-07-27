@@ -32,7 +32,7 @@
   transform: scale(1.3);
 }
 
-h1, h3, p {
+h1, h3, h5, p {
   margin-bottom: 0;
 }
 
@@ -222,6 +222,8 @@ input {
   margin-top: 105px;
   position: relative;
   display: table;
+  margin-left: auto;
+  margin-right: auto;
 }
 .banner__title {
   display: table-cell;
@@ -229,6 +231,7 @@ input {
   position: absolute;
   width: 480px;
   padding-top: 150px;
+  margin-left: -150px;
 }
 .banner__title h1 {
   font-family: Helvetica;
@@ -254,9 +257,9 @@ input {
 .banner__img {
   display: table-cell;
   vertical-align: top;
-  width: 90%;
+  width: 100%;
   float: right;
-  margin-right: -57px;
+  margin-right: -200px;
 }
 
 .slide h2 {
@@ -268,7 +271,7 @@ input {
   color: #FCC921;
 }
 .slide p {
-  text-align: center;
+  text-align: center !important;
   font-family: Helvetica;
   font-size: 24px;
   line-height: 29px;
@@ -327,11 +330,23 @@ input {
   color: #429E05;
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1170px) {
+  .banner {
+    overflow-x: hidden;
+  }
+  .banner__title {
+    margin-left: 0;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .container {
     margin: 10px 30px;
   }
 
+  .banner {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   .banner__title {
     width: 350px;
     padding-top: 90px;
@@ -375,6 +390,7 @@ input {
   .banner__title {
     width: 350px;
     padding-top: 30px;
+    margin-left: 20px;
   }
   .banner__title h1 {
     font-size: 24px;
@@ -385,40 +401,50 @@ input {
   .banner__img {
     width: 100%;
     margin-right: 0;
+    opacity: 0.4;
+    margin-top: 50px;
   }
 
+  .slide {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
   .slide img {
     width: 100%;
   }
   .slide p {
     margin-bottom: 30px;
+    text-align: center;
   }
 
   .contact {
     margin-top: 10px;
   }
+  .contact__title {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
   .contact form {
+    width: 100%;
     flex-flow: column;
   }
   .contact button {
     margin-top: 10px;
   }
 
-  .footer li {
-    padding: 0px 10px;
+  .footer {
+    display: none;
   }
 }
 @media only screen and (max-width: 360px) {
-  .container {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-
   .header {
     max-width: 360px;
     margin: 10px 30px;
     flex-flow: column;
     align-items: flex-start !important;
+  }
+  .header__logo-name {
+    font-size: 24px;
   }
 
   .header__menu li {
@@ -431,6 +457,8 @@ input {
 
   .banner {
     display: inherit;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   .banner__title {
     position: static;
@@ -444,11 +472,16 @@ input {
     margin-right: 0;
   }
 
+  .slide {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
   .slide img {
     width: 100%;
   }
   .slide p {
     margin-bottom: 30px;
+    text-align: center;
   }
 
   .contact {
@@ -463,9 +496,18 @@ input {
     margin-top: 10px;
   }
 
+  .footer {
+    height: 200px;
+  }
+  .footer ul {
+    padding: 20px 0;
+  }
   .footer li {
     display: grid;
     margin: 10px auto;
+  }
+  .footer a {
+    font-size: 14px;
   }
 }
 .contact-lienhe {
@@ -547,7 +589,7 @@ input {
 }
 .vietGrap h3 {
   font-family: Helvetica;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 24px;
   line-height: 138.5%;
   color: #383838;
@@ -578,14 +620,107 @@ input {
     font-size: 14px;
   }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (min-width: 361px) and (max-width: 767px) {
   .vietGrap {
     margin-top: 180px;
+  }
+  .vietGrap__title {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .vietGrap__img {
     margin-left: 15px;
     margin-right: 15px;
   }
   .vietGrap__img img {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .vietGrap {
+    margin-top: 180px;
+  }
+  .vietGrap__title {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .vietGrap__img {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .vietGrap__img img {
+    width: 100%;
+  }
+}
+.infomation {
+  margin-top: 150px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.infomation h5 {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 138.5%;
+  color: #383838;
+}
+.infomation li {
+  margin: 25px 0;
+}
+.infomation a {
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: 138.5%;
+  color: #383838;
+}
+.infomation a:hover {
+  color: #429E05;
+}
+.infomation p {
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: 138.5%;
+  color: #383838;
+  margin-top: 16px;
+  text-align: justify;
+}
+.infomation__farmer img {
+  margin-top: 25px;
+  margin-bottom: 35px;
+}
+.infomation__make img {
+  margin-top: 25px;
+  margin-bottom: 35px;
+}
+.infomation__img h5 {
+  margin-bottom: 35px;
+}
+.infomation__img p {
+  margin-top: 16px;
+  font-family: Helvetica;
+  line-height: 24px;
+  color: #383838;
+}
+.infomation__img .title__price,
+.infomation__img .title__info {
+  font-size: 14px;
+  font-weight: 400;
+}
+.infomation__img .title__img {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+hr {
+  margin: 25px auto;
+}
+
+@media only screen and (max-width: 360px) {
+  .infomation__img,
+.infomation__make,
+.infomation__farmer {
+    margin: 0 20px;
   }
 }
 
