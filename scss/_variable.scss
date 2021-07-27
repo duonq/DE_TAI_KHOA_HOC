@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+.container{
+    padding-left: 0;
+    padding-right: 0;
+}
+.navbar{
+    padding: 0 !important;
+}
+.navbar-brand{
+    margin-right: 0;
+}
+.zoom{
+    overflow: hidden;
+    display: block;
+    img{
+        transition: .3s ease;
+        width: 100%;
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.3);
+        }
+    }
+}
+//mixi
+@mixin  table-cell {
+    display: table-cell;
+    vertical-align: top;
+}
+@mixin d-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+//respon
+$res_360 : "only screen and (max-width: 360px)";
+$res_361 : "only screen and (min-width: 361px) and (max-width: 767px)";
+$res_768 : "only screen and (min-width: 768px) and (max-width: 1023px)";
+$res_1024 : "only screen and (min-width: 1024px) and (max-width: 1170px)";
+
+@mixin responsive_360() {
+    @media #{$res_360} {
+        @content;
+    }
+}
+@mixin responsive_361() {
+    @media #{$res_361} {
+        @content;
+    }
+}
+@mixin responsive_768() {
+    @media #{$res_768} {
+        @content;
+    }
+}
+@mixin responsive_1024() {
+    @media #{$res_1024} {
+        @content;
+    }
+}

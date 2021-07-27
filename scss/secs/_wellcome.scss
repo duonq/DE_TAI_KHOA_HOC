@@ -1,0 +1,313 @@
+@import '../variable';
+@import '../components/button';
+@import '../components/input';
+
+#header{
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+}
+.header{
+    @include d-flex;
+    margin: 5px auto;
+    
+    &__logo{
+        display: table;
+        img{
+            @include table-cell;
+        }
+        &-name{
+            @include table-cell;
+            font-family: Mulish;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 45px;
+            color: #429E05;
+        }
+        span{
+            line-height: 60px;
+            &:last-child{
+                color: #9e6a05;
+            }
+        }
+    }
+    &__menu{
+        ul{
+            display: flex;
+            line-height: 60px;
+        }
+        li{
+            padding: 0 20px;
+        }
+        a{
+            color: #383838 !important;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            &:hover{
+                cursor: pointer;
+                color: #429E05 !important;
+                text-decoration: none;
+            }
+        }
+    }
+    &__form{
+        margin: auto 0;
+    }
+}
+
+.banner{
+    margin-top: 105px;
+    position: relative;
+    display: table;
+    &__title{
+        @include table-cell;
+        position: absolute;
+        width: 480px;
+        padding-top: 150px;
+        h1{
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 129.8%;
+            color: #FCC921;
+        }
+        span{
+            color: #429E05;
+        }
+        p{
+            font-family: Helvetica;
+            font-size: 18px;
+            line-height: 21px;
+            color: #6D6868;
+            margin-top: 25px;
+        }
+        button{
+            margin-top: 25px;
+        }
+    }
+    &__img{
+        @include table-cell;
+        width: 90%;
+        float: right;
+        margin-right: -57px;
+    }
+}
+
+.slide{
+    h2{
+        margin: 50px auto;
+        text-align: center;
+        color: #429E05;
+        span{
+            color: #FCC921;
+        }
+    }
+    p{
+        text-align: center;
+        font-family: Helvetica;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000;
+        margin-top: 15px;
+        text-align: justify;
+    }
+}
+
+.contact{
+    margin-top: 130px;
+    &__title{
+        margin-top: 73px;
+        &--size-m{
+            font-family: Helvetica;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 44px;
+            color: #000;
+        }
+        &--size-s{
+            font-family: Helvetica;
+            font-size: 24px;
+            margin-top: 20px;
+            line-height: 29px;
+            color: #6D6868;
+        }
+    }
+    form{
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+    }
+}
+
+.footer{
+    background-color: #ddd;
+    margin: 0 auto;
+    height: 120px;
+    line-height: 120px;
+    ul{
+        text-align: center;
+    }
+    li{
+        padding: 0 30px;
+        display: inline;
+    }
+    a{
+        font-family: Helvetica;
+        font-size: 18px;
+        line-height: 23px;
+        color: #000000;
+        &:hover{
+            text-decoration: none;
+            color: #429E05;
+        }
+    }
+}
+
+@include responsive_1024{
+
+}
+@include responsive_768{
+    .container{
+        // max-width: 868px !important;
+        margin: 10px 30px;
+    }
+    .banner{
+        &__title{
+            width: 350px;
+            padding-top: 90px;
+            margin-left: 10px;
+            h1{
+                font-size: 25px;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+        &__img{
+            margin-right: 0 !important;
+        }
+    }
+    
+}
+@include responsive_361{
+    .container{
+        margin: 10px 20px;
+    }
+    .header{
+        max-width: 767px;
+        margin: 10px 30px;
+        flex-flow: column;
+        align-items: flex-start !important;        
+    }
+    .header__menu li{
+        padding: 0;
+    }
+    .header__form{
+        button{
+            margin-top: 10px;
+        }
+    }
+    .banner{
+        display: inherit;
+        margin-left: 15px;
+        margin-right: 15px;
+        &__title{
+            width: 350px;
+            padding-top: 30px;
+            h1{
+                font-size: 24px;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+        &__img{
+            width: 100%;
+            margin-right: 0;           
+        }
+    }
+    .slide{
+        img{
+            width: 100%;
+        }
+        p{
+            margin-bottom: 30px;
+        }
+    }
+    .contact{
+        margin-top: 10px;
+        form{
+            flex-flow: column;
+        }
+        button{
+            margin-top: 10px;
+        }
+    }
+    .footer li{
+        padding: 0px 10px;
+    }
+}
+@include responsive_360{
+    .container{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .header{
+        max-width: 360px;
+        margin: 10px 30px;
+        flex-flow: column;
+        align-items: flex-start !important;        
+    }
+    .header__menu li{
+        padding: 0;
+    }
+    .header__form{
+        button{
+            margin-top: 10px;
+        }
+    }
+    .banner{
+        display: inherit;
+        &__title{
+            position: static;
+            padding-top: 50px !important;
+            h1{
+                font-size: 27px;
+            }
+        }
+        &__img{
+            width: 100%;
+            margin-right: 0;           
+        }
+    }
+    .slide{
+        img{
+            width: 100%;
+        }
+        p{
+            margin-bottom: 30px;
+        }
+    }
+    .contact{
+        margin-top: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
+        form{
+            flex-flow: column;
+        }
+        button{
+            margin-top: 10px;
+        }
+    }
+    .footer li{
+        display: grid;
+        margin: 10px auto;
+    }
+}
