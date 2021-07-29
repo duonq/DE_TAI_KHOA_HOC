@@ -1,0 +1,18 @@
+.history{
+    margin: 150px auto;
+}
+@include responsive_768{
+    .history{
+        margin: 150px 20px;
+    }
+}
+@include responsive_361{
+    .history{
+        margin: 150px 20px;
+    }
+}
+@include responsive_360{
+    .history{
+        margin: 150px 15px;
+    }
+}

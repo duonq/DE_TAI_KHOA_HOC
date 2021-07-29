@@ -363,11 +363,19 @@ input {
   }
 }
 @media only screen and (min-width: 361px) and (max-width: 767px) {
+  .navbar {
+    margin: 10px;
+  }
+
   .header {
     max-width: 767px;
     margin: 10px 30px;
     flex-flow: column;
+    display: contents !important;
     align-items: flex-start !important;
+  }
+  .header__logo-name {
+    font-size: 24px;
   }
 
   .header__menu li {
@@ -416,6 +424,9 @@ input {
   .contact {
     margin: 10px 20px;
   }
+  .contact__title--size-m {
+    font-size: 28px;
+  }
   .contact form {
     width: 100%;
     flex-flow: column;
@@ -429,10 +440,14 @@ input {
   }
 }
 @media only screen and (max-width: 360px) {
+  .navbar {
+    margin: 10px;
+  }
+
   .header {
+    display: contents !important;
     max-width: 360px;
     margin: 10px 30px;
-    flex-flow: column;
     align-items: flex-start !important;
   }
   .header__logo-name {
@@ -474,12 +489,19 @@ input {
   .slide p {
     margin-bottom: 30px;
     text-align: center;
+    font-size: 16px;
   }
 
   .contact {
     margin-top: 10px;
     margin-left: 15px;
     margin-right: 15px;
+  }
+  .contact__title--size-m {
+    font-size: 24px;
+  }
+  .contact__title--size-s {
+    font-size: 18px;
   }
   .contact form {
     flex-flow: column;
@@ -708,11 +730,118 @@ hr {
   margin: 25px auto;
 }
 
+@media only screen and (min-width: 361px) and (max-width: 767px) {
+  .infomation .row {
+    --bs-gutter-x: 0;
+  }
+
+  .infomation__img,
+.infomation__make,
+.infomation__farmer {
+    margin: 0 20px;
+  }
+}
 @media only screen and (max-width: 360px) {
   .infomation__img,
 .infomation__make,
 .infomation__farmer {
     margin: 0 20px;
+  }
+}
+.gioiThieu {
+  margin: 150px auto 50px;
+  font-family: Helvetica;
+  line-height: 22px;
+  text-align: justify;
+  color: #383838;
+}
+.gioiThieu h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 22px;
+}
+.gioiThieu p {
+  margin: 20px 0;
+  font-weight: 400;
+  font-size: 18px;
+}
+.gioiThieu__img {
+  text-align: center;
+  margin: 30px auto;
+}
+.gioiThieu__img p {
+  font-size: 16px;
+}
+.gioiThieu__footer {
+  margin: 50px 20px;
+}
+.gioiThieu__footer h3 {
+  text-transform: uppercase;
+}
+.gioiThieu__footer p {
+  font-family: Helvetica;
+  margin: 20px 0;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 361px) and (max-width: 767px) {
+  .gioiThieu h3 {
+    font-size: 18px;
+  }
+  .gioiThieu p {
+    font-size: 16px;
+  }
+  .gioiThieu__title {
+    margin: 10px 20px;
+  }
+  .gioiThieu__img p {
+    font-size: 14px;
+  }
+  .gioiThieu__footer h3 {
+    font-size: 18px;
+  }
+  .gioiThieu__footer p {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .gioiThieu h3 {
+    font-size: 16px;
+  }
+  .gioiThieu p {
+    font-size: 14px;
+  }
+  .gioiThieu__title {
+    margin: 10px 15px;
+  }
+  .gioiThieu__img p {
+    font-size: 12px;
+  }
+  .gioiThieu__footer h3 {
+    font-size: 16px;
+  }
+  .gioiThieu__footer p {
+    font-size: 14px;
+  }
+}
+.history {
+  margin: 150px auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .history {
+    margin: 150px 20px;
+  }
+}
+@media only screen and (min-width: 361px) and (max-width: 767px) {
+  .history {
+    margin: 150px 20px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .history {
+    margin: 150px 15px;
   }
 }
 

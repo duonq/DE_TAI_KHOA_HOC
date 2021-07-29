@@ -77,7 +77,16 @@ hr{
 }
 
 @include responsive_361{
-    
+    .infomation{
+        .row{
+            --bs-gutter-x: 0;
+        }
+    }
+    .infomation__img,
+    .infomation__make,
+    .infomation__farmer{
+        margin: 0 20px;
+    }
 }
 
 @include responsive_360{

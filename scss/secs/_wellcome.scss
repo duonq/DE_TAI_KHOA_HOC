@@ -207,11 +207,18 @@
     
 }
 @include responsive_361{
+    .navbar{
+        margin: 10px;
+    }
     .header{
         max-width: 767px;
         margin: 10px 30px;
         flex-flow: column;
-        align-items: flex-start !important;        
+        display: contents !important;
+        align-items: flex-start !important;   
+        &__logo-name{
+            font-size: 24px;
+        }     
     }
     .header__menu li{
         padding: 0;
@@ -256,6 +263,9 @@
     }
     .contact{
         margin: 10px 20px;
+        &__title--size-m{
+            font-size: 28px;
+        }
         form{
             width: 100%;
             flex-flow: column;
@@ -269,10 +279,14 @@
     }
 }
 @include responsive_360{
+    .navbar{
+        margin: 10px;
+    }
     .header{
+        display: contents !important;
         max-width: 360px;
         margin: 10px 30px;
-        flex-flow: column;
+        // flex-flow: column;
         align-items: flex-start !important; 
         &__logo-name{
             font-size: 24px;
@@ -311,12 +325,19 @@
         p{
             margin-bottom: 30px;
             text-align: center;
+            font-size: 16px;
         }
     }
     .contact{
         margin-top: 10px;
         margin-left: 15px;
         margin-right: 15px;
+        &__title--size-m{
+            font-size: 24px;
+        }
+        &__title--size-s{
+            font-size: 18px;
+        }
         form{
             flex-flow: column;
         }

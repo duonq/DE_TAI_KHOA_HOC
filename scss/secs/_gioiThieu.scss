@@ -1,0 +1,99 @@
+.gioiThieu{
+    margin: 150px auto 50px;
+    font-family: Helvetica;
+    line-height: 22px;
+    text-align: justify;
+    
+    color: #383838;
+    h3{
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 22px;
+    }
+    p{
+        margin: 20px 0;
+        font-weight: 400;
+        font-size: 18px;
+    }
+    &__img{
+        text-align: center;
+        margin: 30px auto;
+        p{
+            font-size: 16px;
+        }
+    }
+    &__footer{
+        margin: 50px 20px;
+        h3{
+            text-transform: uppercase;
+        }
+        p{
+            font-family: Helvetica;
+            margin: 20px 0;
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+}
+
+@include responsive_1024{
+    
+}
+
+@include responsive_768{
+    
+}
+
+@include responsive_361{
+    .gioiThieu{
+        h3{
+            font-size: 18px;
+        }
+        p{
+            font-size: 16px;
+        }
+        &__title{
+            margin: 10px 20px;
+        }
+        &__img{
+            p{
+                font-size: 14px;
+            }
+        }
+        &__footer{
+            h3{
+                font-size: 18px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@include responsive_360{
+    .gioiThieu{
+        h3{
+            font-size: 16px;
+        }
+        p{
+            font-size: 14px;
+        }
+        &__title{
+            margin: 10px 15px;
+        }
+        &__img{
+            p{
+                font-size: 12px;
+            }
+        }
+        &__footer{
+            h3{
+                font-size: 16px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
